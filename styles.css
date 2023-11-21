@@ -1,4 +1,7 @@
 /* Add styling for your gallery and quiz sections here */
+body {
+background: black
+}
 .gallery {
     display: flex;
     justify-content: space-around;
