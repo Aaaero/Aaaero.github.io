@@ -1,14 +1,1 @@
-body {
-    background-color: black;
-    color: white; /* Set text color to white for better contrast */
-}
 
-/* Existing styles for gallery and quiz sections remain unchanged */
-.gallery {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px;
-}
-
-.quiz {
-    margin: 20px;
