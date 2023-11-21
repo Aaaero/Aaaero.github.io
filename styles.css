@@ -1,0 +1,12 @@
+/* Add styling for your gallery and quiz sections here */
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.quiz {
+    margin: 20px;
+}
+
+/* Add more styling as needed */
