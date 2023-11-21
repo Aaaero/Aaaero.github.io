@@ -1,5 +1,9 @@
-/* Add styling for your gallery and quiz sections here */
+body {
+    background-color: black;
+    color: white; /* Set text color to white for better contrast */
+}
 
+/* Existing styles for gallery and quiz sections remain unchanged */
 .gallery {
     display: flex;
     justify-content: space-around;
@@ -8,6 +12,3 @@
 
 .quiz {
     margin: 20px;
-}
-
-/* Add more styling as needed */
