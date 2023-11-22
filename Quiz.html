@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Web Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+    <!-- Include the external menu -->
+    <div id="menu-container"></div>
+
+    <!-- Quiz Section -->
+    <div class="quiz">
+        <h2>Quiz Title</h2>
+        <form id="quiz-form">
+            <!-- Your quiz questions and options will go here -->
+            <div class="question">
+                <p>Question 1: What is the capital of...?</p>
+                <label>
+                    <input type="radio" name="q1" value="option1"> Option 1
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="option2"> Option 2
+                </label>
+                <!-- Add more options as needed -->
+            </div>
+            <!-- Add more questions as needed -->
+            <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+        </form>
+        <div id="quiz-result"></div> <!-- This is where the quiz result will be displayed -->
+    </div>
+
+    <script src="list.js"></script> <!-- Link to your external JavaScript file -->
+    <script>
+        // Load menu.html into the menu-container div
+        var menuContainer = document.getElementById('menu-container');
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'menu.html', true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                menuContainer.innerHTML = xhr.responseText;
+            }
+        };
+        xhr.send();
+    </script>
+
+</body>
+</html>

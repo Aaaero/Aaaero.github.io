@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+    <!-- Include the external menu -->
+    <div id="menu-container"></div>
+
+    <!-- Gallery Section -->
+    <div class="gallery">
+        <!-- Your gallery images will go here -->
+        <img src="images/CCNA1.png" alt="Image 1">
+        <img src="images/CCNA2.png" alt="Image 2">
+        <!-- Add more images as needed -->
+    </div>
+
+    <script src="list.js"></script> <!-- Link to your external JavaScript file -->
+    <script>
+        // Load menu.html into the menu-container div
+        var menuContainer = document.getElementById('menu-container');
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'menu.html', true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                menuContainer.innerHTML = xhr.responseText;
+            }
+        };
+        xhr.send();
+    </script>
+
+</body>
+</html>
